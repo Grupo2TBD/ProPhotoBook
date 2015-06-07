@@ -1,0 +1,23 @@
+<div data-ng-app='formApp'>
+<h1 id="textRegister">LOG IN TO PRO PHOTOBOOK <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> </h1>		
+	<div data-ng-controller='MainCtrl'>
+		<form id= "form" name='formulario' action="webresources/entity.usuario/login" method="POST">
+
+			<div class="form-group">
+				<input type="username" class="form-control" placeholder="Username" 
+				name='id' data-ng-model='formData.username' required>
+				<!--<span data-ng-show='!formulario.$pristine && formulario.username.$error.required'>Username is required</span>-->
+			</div>
+
+
+			<div class="form-group">
+				<input type="password" class="form-control" placeholder="Password" 
+				name='pass' data-ng-model='formData.password' required>
+				<!--<span data-ng-show='!formulario.$pristine && formulario.password.$error.required'>Password is required</span>-->
+			</div>
+
+			<button type="boton" class='btn btn-default pull-left' data-ng-click='submitForm(formData)' 
+			data-ng-disabled='!formulario.$valid'>Enter</button>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,48 @@
+<h1 id="textRegister">SIGN UP TO PRO PHOTOBOOK <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> </h1>		
+	<div data-ng-controller='MainCtrl'>
+		<form id= "form" name='formulario'>
+			<div class="form-group">
+							<input type="name" class="form-control" placeholder="Name" 
+							name='name' data-ng-model='formData.name' required>
+						</div>
+
+						<div class="form-group">
+							<input type="lastname" class="form-control" placeholder="Lastname" 
+							name='lastname' data-ng-model='formData.lastname' required>
+							
+						</div>
+
+						<div class="form-group">
+							<label class="radio-inline">
+								<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Male
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Female
+							</label>
+						</div>
+
+						<div class="form-group">
+							<input type="date" class="form-control" placeholder="dd/mm/yyyy" 
+							name='date' data-ng-model='formData.date' required>
+						</div>
+
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="example@email.com" 
+							name='email' data-ng-model='formData.email' required>
+						</div>
+
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="Password" 
+							name='password' data-ng-model='formData.password' required>
+						</div>
+
+						<div class="form-group">
+							<input type="username" class="form-control" placeholder="Username" 
+							name='username' data-ng-model='formData.username' required>
+						</div>
+
+
+			<button href="#" type="boton" class='btn btn-default pull-left' data-ng-click='submitForm(formData)' 
+			data-ng-disabled='!formulario.$valid'>Sign up</button>
+		</form>
+	</div>
