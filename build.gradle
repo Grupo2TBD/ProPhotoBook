@@ -39,7 +39,7 @@ war {
 *  http://www.gradle.org/docs/current/dsl/org.gradle.api.tasks.Exec.html
 */
 task deploy(dependsOn: 'war', type:Exec) {
-  workingDir "glassfish-4.1/bin"
+  workingDir "${glassfishHome}${File.separator}bin"
  
   if (System.properties['os.name'].toLowerCase().contains('osx')) {
     commandLine 'cmd', '/c', 'asadmin.bat'

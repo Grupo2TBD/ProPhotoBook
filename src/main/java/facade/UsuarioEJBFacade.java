@@ -20,9 +20,9 @@ import model.Usuario;
 @Stateless
 public class UsuarioEJBFacade extends AbstractFacade<Usuario>{
 
-        @PersistenceContext(unitName = "UsuarioPU")
+        @PersistenceContext(unitName = "ian")
 	private EntityManager em;
-    public UsuarioEJBFacade(Class<Usuario> entityClass) {
+    public UsuarioEJBFacade() {
         super(Usuario.class);
     }
     
