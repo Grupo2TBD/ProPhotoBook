@@ -3,5 +3,22 @@
   <persistence-unit name="ian" transaction-type="JTA">
     <jta-data-source>jdbc/tbd</jta-data-source>
     <class>model.Usuario</class>
+    <class>model.Fotografia</class>
+    <class>model.AlbumFotografia</class>
+    <class>model.Tag</class>
+    <class>model.Privacidad</class>
+    <class>model.TipoClasificacion</class>
+    <class>model.FavoritoAlbum</class>
+    <class>model.ComentarioFotografia</class>
+    <class>model.Exif</class>
+    <class>model.Seguidor</class>
+    <class>model.Localizacion</class>
+    <class>model.Ubicacion</class>
+    <class>model.Permiso</class>
+    <class>model.TipoDeCamara</class>
+    <class>model.Camara</class>
+    <class>model.FavoritoFotografia</class>
+    <class>model.Album</class>
+    <class>model.ComentarioAlbum</class>
   </persistence-unit>
 </persistence>

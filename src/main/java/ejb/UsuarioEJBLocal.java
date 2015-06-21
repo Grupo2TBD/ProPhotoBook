@@ -17,4 +17,7 @@ import model.Usuario;
 @Local
 public interface UsuarioEJBLocal {
     List <Usuario>get();
+    Usuario test();
+    Usuario Login(String mail, String pass);
 }
+

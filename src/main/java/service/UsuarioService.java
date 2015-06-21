@@ -5,6 +5,7 @@
  */
 package service;
 
+import ejb.UsuarioEJBLocal;
 import model.Usuario;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -12,6 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -32,14 +34,22 @@ import javax.ws.rs.Produces;
  * @author ian
  */
 @Path("/user")
-@ApplicationPath("/")
+//@ApplicationPath("/")
 public class UsuarioService {
-
+@EJB
+    UsuarioEJBLocal usuarioEJB;
+    
     @GET
-    @Produces("text/plain")
-    public String getClichedMessage() {
-        return "index.html";
+    @Produces({"application/json"})
+    public Usuario sac() {
+        return usuarioEJB.test();
     }
 	
-
+    @POST
+    @Path("/login")
+    @Produces({"application/json"})
+    public void loginService(){
+       // return usuarioEJB.Login(mail, pass);
+         usuarioEJB.Login("ian@tbd.com", "orellana18");
+    }
 }

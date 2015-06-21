@@ -30,6 +30,27 @@ public class UsuarioEJB implements UsuarioEJBLocal{
 	return this.userFacade.findAll();
     }
         
+    @Override 
+    public Usuario test(){
+        return this.userFacade.find(1);
+    }
     
-    
+    @Override
+    public Usuario Login(String mail, String pass){
+        List <Usuario> list = this.userFacade.findAll();
+            int largo=list.size();
+            int contador=0;
+            while(largo!=0){
+                if(mail.equals(list.get(contador).getCorreoElectronicoUsuario()) && pass.equals(list.get(contador).getContrasenaUsuario())){
+                    return list.get(contador);
+                }
+                contador++;
+                largo--;
+            }
+            Usuario  aux=new Usuario();
+            return aux;
+                
+        
+        
+    }
 }
